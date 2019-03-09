@@ -1,0 +1,22 @@
+[package]
+name = "weblibri"
+version = "0.1.0"
+authors = ["yotaro <yotaro@ieee.org>"]
+
+[dependencies]
+actix-web = "0.7"
+rusqlite = "0.13.0"
+serde_json = "1.0"
+serde = "1.0"
+serde_derive = "1.0"
+askama = "0.7"
+log = { version = "0.4", features = ["max_level_debug", "release_max_level_info"] }
+stderrlog = "0.4"
+structopt = "0.2"
+rusoto_core = "0.34.0"
+rusoto_s3 = "0.34.0"
+futures = "0.1"
+hyper = "0.12"
+
+[build-dependencies]
+askama = "0.7"

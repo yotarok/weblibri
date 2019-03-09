@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Weblibri</title>
+  <link rel="stylesheet" type="text/css" href="{{ app_prefix }}/weblibri.css">
+  <script>
+    var APP_PREFIX = "{{ app_prefix }}";
+    var API_ROOT = "{{ app_prefix }}/api";
+  </script>
+  <script src="{{ app_prefix }}/js/jquery-3.3.1.min.js"></script>
+  <script src="{{ app_prefix }}/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{{ app_prefix }}/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="{{ app_prefix }}/css/bootstrap-theme.min.css"/>
+  <script src="{{ app_prefix }}/js/datatables.min.js"></script>
+  <link rel="stylesheet" href="{{ app_prefix }}/css/datatables.min.css"/>
+  <script src="{{ app_prefix }}/js/ColReorderWithResize.js"></script>
+  <script src="{{ app_prefix }}/weblibri.js"></script>
+  <script>
+    $(document).ready(onReadyMainPage);
+  </script>
+  <!-- script src="/js/jquery-ui.js"></script -->
+</head>
+<body>
+  <div id="booklist"></div>
+
+  <div class="modal" id="convertModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Generating browser preview...</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Converting the book to a browser-friendly format. Please wait for a few seconds (depending on the size of the e-book).</p>
+          <div id="bar-spinner"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
